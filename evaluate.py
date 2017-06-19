@@ -26,7 +26,7 @@ def evaluate_roc(y_test, pred, acc, name='deepwalk'):
     fpr = dict()
     tpr = dict()
     roc_auc = dict()
-    n_classes = 10
+    n_classes = np.max(pred) + 1
     y_test = to_categorical(y_test)
     pred = to_categorical(pred)
     for i in range(n_classes):
