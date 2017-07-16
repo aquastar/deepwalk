@@ -1,4 +1,3 @@
-import cPickle as pk
 import collections
 import copy
 import time
@@ -17,12 +16,7 @@ from gen_simulate import graph_forge
 
 
 def evaluate_roc(y_test, pred, acc, name='deepwalk'):
-    pass
     t_test = time.time()
-
-    # plot
-    # fpr, tpr, _ = roc_curve(np.where(labels == 1)[1], np.argmax(outs_val[2], axis=1)[mask])
-
     fpr = dict()
     tpr = dict()
     roc_auc = dict()

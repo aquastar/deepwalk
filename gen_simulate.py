@@ -32,8 +32,8 @@ from scipy.sparse import lil_matrix
 # 5, feat: related to label; graph: An oracle
 ################################################
 
-FEAT_NUM = 1900
-CLASS_NUM = 2
+FEAT_NUM = 1000
+CLASS_NUM = 10
 DATA_NUM = 10000
 HI_MEAN = [5, 10]
 LO_MEAN = [-10, 5]
@@ -269,7 +269,7 @@ def graph_forge(opt='rand'):
 
 
 if __name__ == '__main__':
-    graph = graph_forge(opt='label-graph-feat')
+    graph = graph_forge(opt='label-graph')
     # get adj list for Deepwalk input
     adjlist = [str(k) + '\t' + '\t'.join(map(str, v.keys())) for k, v in
                from_scipy_sparse_matrix(graph[0]).adj.iteritems()]
